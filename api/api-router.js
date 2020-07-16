@@ -7,6 +7,7 @@ const router = express.Router();
 router.use(express.json());
 
 router.get("/", (req, res) => {
+  const messageOfTheDay = process.env.MOTD || 'Hello WOrld';
   res.status(200).json({ api: "up" });
 });
 
